@@ -1,0 +1,13 @@
+CREATE TABLE `manager` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID key',
+  `username` varchar(20) NOT NULL COMMENT '用户名',
+  `password` varchar(20) NOT NULL COMMENT '密码',
+  `type` int(11) NOT NULL COMMENT '用户类型',
+  `state` char(1) NOT NULL,
+  `isactive` char(1) NOT NULL DEFAULT 'Y',
+  `createby` varchar(20) NOT NULL,
+  `created` datetime NOT NULL,
+  `updateby` varchar(20) DEFAULT NULL,
+  `update` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员表';
